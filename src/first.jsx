@@ -1,4 +1,4 @@
-function first()
+function First()
 {
     return(
         <>
@@ -11,4 +11,4 @@ function first()
     );
 }
 
-export default first;
+export default First;

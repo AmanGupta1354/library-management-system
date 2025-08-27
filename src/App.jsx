@@ -1,9 +1,9 @@
-import first from './first.jsx';
+import First from './First.jsx';
 
 function App() {
 return(
   <>
-    <first />
+    <First />
   </>
 );
 
