@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./app.css";
 
-export default function CheckInOut() {
+export default function First() {
   const [checkIn, setCheckIn] = useState(true);
 
   return (

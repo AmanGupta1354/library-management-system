@@ -1,4 +1,4 @@
-import First from './First.jsx';
+import First from './first.jsx';
 
 function App() {
 return(
