@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DateSet from "./DateSet";
 import "./app.css";
 
 export default function First() {
@@ -22,29 +23,20 @@ export default function First() {
         <div className="sidebar-bottom">
           <span>⚙️</span>
           <span>🔗</span>
+          <span><DateSet></DateSet></span>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="main">
-        {/* Date and Time */}
-        <div className="date-box">
-          <p className="month">JUL</p>
-          <p className="day">17</p>
-          <p className="small">July 17, 2023</p>
-          <p className="small">4:37 pm</p>
-        </div>
 
         {/* User profile */}
-        <div className="profile-pic">
-          <img src="https://via.placeholder.com/150" alt="profile" />
-        </div>
 
         <div className="card">
           <div className="card-header">
-            <span>CHECK-IN</span>
+            <p>CHECK-IN</p>
             <input type="checkbox" checked={checkIn} onChange={() => setCheckIn(!checkIn)} />
-            <span>CHECK-OUT</span>
+            <p>CHECK-OUT</p>
           </div>
 
           {/* Form */}
