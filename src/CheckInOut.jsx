@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DateSet from "./DateSet";
-import "./app.css";
+import "./App.css";
+import { Link } from "react-router-dom";
 
 export default function First() {
   const [checkIn, setCheckIn] = useState(true);
@@ -12,8 +13,8 @@ export default function First() {
         <div>
           <h1>Librix</h1>
           <ul>
-            <li><b>📗 Check-in / out</b></li>
-            <li>📚 Books</li>
+            <li><b><Link to="/Check">📗 Check-in / out</Link></b></li>
+            <li><Link to="/books">📚  Books</Link></li>
             <li>👥 Users</li>
             <li>🛠️ Admin</li>
             <li>🔍 Search</li>
