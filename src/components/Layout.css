@@ -1,0 +1,83 @@
+.layout-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  width: 1000px;
+  height: 700px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #f1c40f;
+}
+
+/* Accordion menu */
+.menu details {
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.menu summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  list-style: none;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding-left: 15px;
+}
+
+.menu ul li {
+  margin: 6px 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  transition: 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Bottom section */
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 8px;
+  margin-top: 20px;
+  color: #bdc3c7;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  
+}

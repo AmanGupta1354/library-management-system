@@ -1,64 +1,148 @@
-import React, { useState } from "react";
-import DateSet from "./DateSet";
-import "../App.css";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import "./CheckInOut.css";
 
-export default function CheckInOut() {
-  const [checkIn, setCheckIn] = useState(true);
+function CheckInOut() {
+  const [mode, setMode] = useState("checkin"); // "checkin" or "checkout"
+  const [formData, setFormData] = useState({
+    userId: "",
+    userName: "",
+    bookId: "",
+    bookName: "",
+    publisher: "",
+    date: "",
+    returnDate: "",
+    condition: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(
+      `✅ ${mode === "checkin" ? "Check-In" : "Check-Out"} Successful!\n\n` +
+        JSON.stringify(formData, null, 2)
+    );
+
+    // Reset form after submit
+    setFormData({
+      userId: "",
+      userName: "",
+      bookId: "",
+      bookName: "",
+      publisher: "",
+      date: "",
+      returnDate: "",
+      condition: "",
+    });
+  };
 
   return (
-    <div className="container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <div>
-          <h1>Librix</h1>
-          <ul>
-            <li><b><Link to="/Check">📗 Check-in / out</Link></b></li>
-            <li><Link to="/books">📚  Books</Link></li>
-            <li>👥 Users</li>
-            <li>🛠️ Admin</li>
-            <li>🔍 Search</li>
-            <li>💲 Fine</li>
-          </ul>
+    <div className="check-container">
+      <div className="check-card">
+        {/* Toggle Buttons */}
+        <div className="toggle-buttons">
+          <button
+            className={mode === "checkin" ? "active" : ""}
+            onClick={() => setMode("checkin")}
+            type="button"
+          >
+            📗 Check-In
+          </button>
+          <button
+            className={mode === "checkout" ? "active" : ""}
+            onClick={() => setMode("checkout")}
+            type="button"
+          >
+            📕 Check-Out
+          </button>
         </div>
-        <div className="sidebar-bottom">
-          <span>⚙️</span>
-          <span>🔗</span>
-          <span><DateSet></DateSet></span>
-        </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="main">
+        {/* Form */}
+        <form className="check-form" onSubmit={handleSubmit}>
+          {/* Common fields */}
+          <label>User ID :</label>
+          <input
+            type="text"
+            name="userId"
+            placeholder="Enter User ID"
+            value={formData.userId}
+            onChange={handleChange}
+          />
 
-        {/* User profile */}
+          <label>Book ID :</label>
+          <input
+            type="text"
+            name="bookId"
+            placeholder="Enter Book ID"
+            value={formData.bookId}
+            onChange={handleChange}
+          />
 
-        <div className="card">
-          <div className="card-header">
-            <p>CHECK-IN</p>
-            <input type="checkbox" checked={checkIn} onChange={() => setCheckIn(!checkIn)} />
-            <p>CHECK-OUT</p>
-          </div>
+          <label>Date :</label>
+          <input
+            type="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+          />
 
-          {/* Form */}
-          <form className="form">
-            <label>User ID : <input type="text" placeholder="Enter User ID" /></label>
-            <label>User Name : <input type="text" placeholder="Enter User Name" /></label>
-            <label>Book ID : <input type="text" placeholder="Enter Book ID" /></label>
-            <label>Book Name : <input type="text" placeholder="Enter Book Name" /></label>
-            <label>Publisher : <input type="text" placeholder="Enter Publisher" /></label>
+          {/* Fields visible only in CHECK-OUT */}
+          {mode === "checkout" && (
+            <>
+              <label>User Name :</label>
+              <input
+                type="text"
+                name="userName"
+                placeholder="Enter User Name"
+                value={formData.userName}
+                onChange={handleChange}
+              />
 
-            <div className="row">
-              <label>Date : <input type="text" placeholder="dd/mm/yyyy" /></label>
-              <label>Return : <input type="text" placeholder="dd/mm/yyyy" /></label>
-            </div>
+              <label>Book Name :</label>
+              <input
+                type="text"
+                name="bookName"
+                placeholder="Enter Book Name"
+                value={formData.bookName}
+                onChange={handleChange}
+              />
 
-            <label>Book Condition : <textarea placeholder="Please mention the book condition, damages (if any)..." /></label>
+              <label>Publisher :</label>
+              <input
+                type="text"
+                name="publisher"
+                placeholder="Enter Publisher"
+                value={formData.publisher}
+                onChange={handleChange}
+              />
 
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+              <label>Return Date :</label>
+              <input
+                type="date"
+                name="returnDate"
+                value={formData.returnDate}
+                onChange={handleChange}
+              />
+
+              <label>Book Condition :</label>
+              <textarea
+                name="condition"
+                placeholder="Please mention the book condition, damages (if any)..."
+                value={formData.condition}
+                onChange={handleChange}
+              />
+            </>
+          )}
+
+          <button type="submit">
+            {mode === "checkin" ? "✅ Submit Check-In" : "📤 Submit Check-Out"}
+          </button>
+        </form>
       </div>
     </div>
   );
 }
+
+export default CheckInOut;

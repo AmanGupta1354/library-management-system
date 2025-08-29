@@ -39,8 +39,8 @@ export default function Signup (){
                 </div>
 
                 <div className="input-group">
-                    <label  className="action">Class</label>
-                    <input type="text" id="class-study" placeholder="eg. 8,9,10" />
+                    <label  className="action">Sap ID</label>
+                    <input type="text" id="class-study" placeholder="6000XXXXXXX" />
                 </div>
 
                 <div className="input-group">

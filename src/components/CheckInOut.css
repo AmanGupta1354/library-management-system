@@ -1,0 +1,124 @@
+/* Outer background */
+.check-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb, #fad0c4);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism card */
+.check-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Toggle buttons */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 5px;
+  background: rgba(255,255,255,0.2);
+  color: #2c3e50;
+  transition: all 0.3s;
+}
+
+.toggle-buttons button.active {
+  background: #2980b9;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Form */
+.check-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.check-form input,
+.check-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+.check-form input:focus,
+.check-form textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 6px rgba(41, 128, 185, 0.5);
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row div {
+  flex: 1;
+}
+
+.check-form textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+/* Submit Button */
+.check-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #27ae60;
+  color: white;
+  transition: all 0.3s;
+}
+
+.check-form button:hover {
+  background: #1abc9c;
+  transform: translateY(-2px);
+}

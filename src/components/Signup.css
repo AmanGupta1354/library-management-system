@@ -7,7 +7,7 @@
 }
 
 body {
-  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+  background: linear-gradient(to bottom right, #93c5fd, #e9d5ff, #fdba74);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,17 +19,18 @@ body {
   display: flex;
   max-width: 700px;
   max-height: 600px;
-  background: rgb(180, 184, 100);
+  background: linear-gradient(70deg,#b76d28 ,rgb(233, 178, 110));
   border-radius: 15px;
   box-shadow: 30px 30px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 100%;
   height: 100vh;
+  animation: slideIn 1s ease;
 }
 
 /* Left side illustration */
 .illustration {
-  background: #abad2b;
+  background: linear-gradient(100deg,rgb(129, 182, 215),rgb(48, 71, 120));
   flex: 1;
   display: flex;
   align-items: center;
@@ -100,7 +101,7 @@ input:focus {
 
 .btn {
   padding: 12px;
-  background: #4f46e5;
+  background: #63440f;
   color: white;
   border: none;
   border-radius: 6px;
@@ -110,7 +111,7 @@ input:focus {
 }
 
 .btn:hover {
-  background: #4338ca;
+  background: #beab5d;
 }
 
 .action:hover
@@ -118,3 +119,7 @@ input:focus {
   transform: translateY(-3px);
 }
 
+@keyframes slideIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
