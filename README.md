@@ -1,12 +1,39 @@
-# React + Vite
+📚 Librix – Library Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Librix is a modern Library Management System built with React.js.
+It allows librarians and admins to manage Books, Users, Check-In / Check-Out transactions, and Fines with a clean and beautiful UI.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ User authentication (Login / Signup)
+✅ Sidebar navigation with accordion menus & icons
+✅ Check-In & Check-Out form with dynamic fields
+✅ Glassmorphism + gradient modern UI
+✅ Dashboard with quick stats & actions
+✅ Manage Books, Users, Admins, Search, and Fines
+✅ Responsive design (works on desktop & mobile)
 
-## Expanding the ESLint configuration
+🖼️ Screenshots
+Dashboard (Home Page)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Welcome card, library stats, and quick actions
+
+Sidebar Layout
+
+Accordion-style sidebar with professional icons
+
+Check-In / Check-Out
+
+Toggle between Check-In and Check-Out
+
+Different fields shown depending on mode
+
+Glassmorphism styled form
+
+🛠️ Tech Stack
+
+Frontend: React.js, React Router.
+
+Styling: CSS3 (Glassmorphism, Gradient Backgrounds)
+
+State Management: useState (React Hooks)
