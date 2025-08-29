@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import DateSet from "./DateSet";
-import "./App.css";
+import "../App.css";
 import { Link } from "react-router-dom";
 
-export default function First() {
+export default function CheckInOut() {
   const [checkIn, setCheckIn] = useState(true);
 
   return (

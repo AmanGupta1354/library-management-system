@@ -1,27 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "./Login.css"
+import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import "./Login.css";
 
-export default function Login(){
+export default function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Add real login validation here if needed
+    navigate("/home");
+  };
+
   return (
-    <>
-        <div class="login-container">
+    <div className="login-page">
+      <div className="login-container">
         <h1>Library Management System</h1>
-        <form action="#" method="post">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required />
-            </div>
+        <form onSubmit={handleLogin}>
+          <div className="input-group">
+            <label htmlFor="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
 
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required />
-            </div>
+          <div className="input-group">
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
 
-            <button type="submit" class="btn">Login</button>
-            <p class="signup-link">Don't have an account? <Link to="/signup">Sign up</Link></p>
+          <button type="submit" className="btn">Login</button>
+          <p className="signup-link">
+            Don't have an account? <Link to="/signup">Sign up</Link>
+          </p>
         </form>
+      </div>
     </div>
-    </>
   );
 }

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import DateSet from "./DateSet";
-import "./App.css";
+import "../App.css";
 import { Link } from "react-router-dom";
 
-export default function Books() {
+export default function Fine() {
   const [checkIn, setCheckIn] = useState(true);
 
   return (
@@ -14,11 +14,11 @@ export default function Books() {
           <h1>Librix</h1>
           <ul>
             <li><Link to="/Check">📗 Check-in / out</Link></li>
-            <li><b><Link to="/books">📚  Books</Link></b></li>
-            <li>👥 Users</li>
-            <li>🛠️ Admin</li>
-            <li>🔍 Search</li>
-            <li>💲 Fine</li>
+            <li><Link to="/books">📚  Books</Link></li>
+            <li><Link to="/books">👥 Users</Link></li>
+            <li><Link to="/books">🛠️ Admin</Link></li>
+            <li><Link to="/books">🔍 Search</Link></li>
+            <li><b><Link to="/fine">💲 Fine</Link></b></li>
           </ul>
         </div>
         <div className="sidebar-bottom">
