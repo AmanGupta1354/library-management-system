@@ -25,7 +25,16 @@
   font-size: 1.3rem;
   margin-bottom: 20px;
   text-align: center;
-  color: #f1c40f;
+  color: #d6b11e;
+}
+
+.logo-text {
+  text-decoration: none;
+  color: #d6b11e;
+}
+
+.logo-text:hover {
+  color: #f39c12;
 }
 
 /* Accordion menu */

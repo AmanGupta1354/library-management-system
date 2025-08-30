@@ -7,7 +7,7 @@ function Layout() {
     <div className="layout-container">
       {/* Sidebar */}
       <aside className="sidebar">
-        <h2 className="logo">📚 Librix</h2>
+        <h2 className="logo"><Link to="/home" className="logo-text">📚 Librix</Link></h2>
         
         <div className="menu">
           <details open>

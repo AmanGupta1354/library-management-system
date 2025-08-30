@@ -1,6 +1,10 @@
 import "./Home.css";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+  const navigate=useNavigate();
   return (
     <div className="home-container">
       {/* Welcome Section */}
@@ -26,17 +30,17 @@ function Home() {
           <h2>🔄 30</h2>
           <p>Books Issued</p>
         </div>
-        <div className="stat-card">
-          <h2>💲 12</h2>
+        <div className="stat-card" onClick={()=>navigate("/fine")}>
+          <h2> ₹225</h2>
           <p>Pending Fines</p>
         </div>
       </div>
 
       {/* Quick Actions */}
       <div className="quick-actions">
-        <button>➕ Add New Book</button>
-        <button>👤 Add User</button>
-        <button>🔍 Search Books</button>
+        <button onClick={()=>navigate("/home/addbooks")}>➕ Add New Book</button>
+        <button onClick={()=>navigate("/home/adduser")}>👤 Add User</button>
+        <button onClick={()=>navigate("/home/searchbook")}>🔍 Search Books</button>
       </div>
     </div>
   );

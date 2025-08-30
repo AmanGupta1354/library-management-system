@@ -1,0 +1,46 @@
+.fines-container {
+  padding: 25px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+.fines-container h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.fines-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.fines-table th, .fines-table td {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 15px;
+}
+
+.fines-table th {
+  background: #34495e;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fines-table tr:hover {
+  background: #f1f7ff;
+  transition: 0.3s;
+}
+
+.amount {
+  font-weight: bold;
+  color: #e74c3c;
+}

@@ -1,0 +1,50 @@
+.user-container {
+ padding: 20px;
+  width: 900px;   /* increased width */
+  margin: 0 auto;  /* keeps it centered */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.user-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.add-user-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-user-btn:hover {
+  background: #145aa8;
+}

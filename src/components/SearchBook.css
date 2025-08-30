@@ -1,0 +1,47 @@
+.search-book {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-book h2 {
+  margin-bottom: 15px;
+}
+
+.search-book form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-book input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-book button {
+  padding: 8px 16px;
+  background: #1976d2;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-book button:hover {
+  background: #0d47a1;
+}
+
+.results .book-card {
+  background: #f4f6f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+.results .book-card h3 {
+  margin: 0 0 5px 0;
+}   

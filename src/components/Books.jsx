@@ -1,39 +1,44 @@
 import React, { useState } from "react";
-import DateSet from "./DateSet";
-import "../App.css";
-import { Link } from "react-router-dom";
+import "./Books.css";
 
-export default function Books() {
-  const [checkIn, setCheckIn] = useState(true);
+const Books = () => {
+  const [books, setBooks] = useState([
+    { id: "B101", title: "React Basics", author: "Dan Abramov", category: "Programming", available: true },
+    { id: "B102", title: "Java Fundamentals", author: "James Gosling", category: "Programming", available: false },
+    { id: "B103", title: "Python for Everyone", author: "Guido van Rossum", category: "Programming", available: true },
+    { id: "B104", title: "Clean Code", author: "Robert C. Martin", category: "Software Engineering", available: true },
+    { id: "B105", title: "AI Revolution", author: "Andrew Ng", category: "Artificial Intelligence", available: false },
+  ]);
 
   return (
-    <div className="container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <div>
-          <h1>Librix</h1>
-          <ul>
-            <li><Link to="/Check">📗 Check-in / out</Link></li>
-            <li><b><Link to="/books">📚  Books</Link></b></li>
-            <li>👥 Users</li>
-            <li>🛠️ Admin</li>
-            <li>🔍 Search</li>
-            <li>💲 Fine</li>
-          </ul>
-        </div>
-        <div className="sidebar-bottom">
-          <span>⚙️</span>
-          <span>🔗</span>
-          <span><DateSet></DateSet></span>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="main">
-
-        
-        
-      </div>
+    <div className="books-container">
+      <h2>📚 Library Books</h2>
+      <table className="books-table">
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map((book) => (
+            <tr key={book.id}>
+              <td>{book.id}</td>
+              <td>{book.title}</td>
+              <td>{book.author}</td>
+              <td>{book.category}</td>
+              <td className={book.available ? "available" : "unavailable"}>
+                {book.available ? "✅ Available" : "❌ Checked Out"}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
-}
+};
+
+export default Books;

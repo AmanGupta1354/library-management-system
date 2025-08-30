@@ -1,39 +1,40 @@
 import React, { useState } from "react";
-import DateSet from "./DateSet";
-import "../App.css";
-import { Link } from "react-router-dom";
+import "./Fine.css";
 
-export default function Fine() {
-  const [checkIn, setCheckIn] = useState(true);
+const Fines = () => {
+  const [fines, setFines] = useState([
+    { id: 1, userId: "U101", name: "Aarav Gupta", contact: "9876543210", book: "React Basics", amount: 50 },
+    { id: 2, userId: "U102", name: "Riya Sharma", contact: "9123456789", book: "Java Programming", amount: 100 },
+    { id: 3, userId: "U103", name: "Karan Mehta", contact: "9988776655", book: "Python Essentials", amount: 75 },
+  ]);
 
   return (
-    <div className="container">
-      {/* Sidebar */}
-      <div className="sidebar">
-        <div>
-          <h1>Librix</h1>
-          <ul>
-            <li><Link to="/Check">📗 Check-in / out</Link></li>
-            <li><Link to="/books">📚  Books</Link></li>
-            <li><Link to="/books">👥 Users</Link></li>
-            <li><Link to="/books">🛠️ Admin</Link></li>
-            <li><Link to="/books">🔍 Search</Link></li>
-            <li><b><Link to="/fine">💲 Fine</Link></b></li>
-          </ul>
-        </div>
-        <div className="sidebar-bottom">
-          <span>⚙️</span>
-          <span>🔗</span>
-          <span><DateSet></DateSet></span>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="main">
-
-        
-        
-      </div>
+    <div className="fines-container">
+      <h2>📑 Pending Fines</h2>
+      <table className="fines-table">
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Book</th>
+            <th>Fine Amount (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {fines.map((fine) => (
+            <tr key={fine.id}>
+              <td>{fine.userId}</td>
+              <td>{fine.name}</td>
+              <td>{fine.contact}</td>
+              <td>{fine.book}</td>
+              <td className="amount">₹{fine.amount}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
-}
+};
+
+export default Fines;
