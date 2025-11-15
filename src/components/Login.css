@@ -6,7 +6,7 @@
 }
 
 .login-page {
-    background: linear-gradient(to bottom right, #93c5fd, #e9d5ff, #73196f);
+    background: linear-gradient(to bottom left, #93c5fd, #e9d5ff, #73196f);
     background-size: cover;
     height: 100vh;
     width: 100vw;
@@ -30,7 +30,7 @@
 .login-container {
     position: relative;
     z-index: 1;
-    background: rgba(210, 49, 49, 0.15);
+    background: rgba(0, 0, 0, 0.15);
     padding: 40px 30px;
     width: 380px;
     border-radius: 20px;
