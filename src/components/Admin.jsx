@@ -32,7 +32,7 @@ const Admin = () => {
         <button className="admin-btn">👤 Manage Users</button>
         <button className="admin-btn">📚 Manage Books</button>
         <button className="admin-btn">💰 Manage Fines</button>
-        <button className="admin-btn" onClick={()=> navi("/admin/viewreport")}>📊 View Reports</button>
+        <button className="admin-btn" onClick={()=> navi("/admin/viewrepor  t")}>📊 View Reports</button>
         <button className="admin-btn">⚙️ Library Settings</button>
       </div>
     </div>
